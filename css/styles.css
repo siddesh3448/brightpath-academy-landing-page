@@ -1093,7 +1093,7 @@ h2 span {
   }
 
   .container {
-    width: min(100% - 36px, 520px);
+    width: min(520px, calc(100% - 36px));
   }
 
   .section {
@@ -1187,17 +1187,18 @@ h2 span {
   }
 
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 33px;
   }
 
   .hero-copy {
+    min-width: 0;
     padding-bottom: 0;
   }
 
   .hero h1 {
     max-width: 520px;
-    font-size: clamp(49px, 13vw, 68px);
+    font-size: clamp(38px, 10.5vw, 52px);
   }
 
   .hero-description {
@@ -1214,6 +1215,7 @@ h2 span {
   }
 
   .hero-art {
+    min-width: 0;
     min-height: 330px;
     border-radius: 44% 44% 8px 8px;
   }
